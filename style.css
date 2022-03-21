@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+:root {
+  --font-family: "Open Sans", sans-serif;
+
+  --btn-color: #e73e10;
+  --bgc-color: #f5f3f4;
+  --bgc-color-secondary: #ffffff;
+
+  --border-radius-primary: 5px;
+  --font-size-primary: 20px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--bgc-color);
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+.sfu_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.12);
+  border-radius: var(--border-radius-primary);
+  background-color: var(--bgc-color-secondary);
+}
+
+.sfu_header .header_text {
+  font-size: var(--font-size-primary);
+  margin-left: 50px;
+}
+
+.header_desc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+  gap: 20px;
+}
+
+.header_desc div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.help_text {
+  color: black;
+}
+
+.header_desc span {
+  cursor: pointer;
+}
+
+img {
+  max-width: 320px;
+  max-height: 210px;
+  width: auto;
+  height: auto;
+}
+
+.menu {
+  display: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.card_menu {
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+  height: 400px;
+  padding: 30px 20px;
+  background-color: var(--bgc-color-secondary);
+}
+
+div.first_card .card_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card_main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.card_main .title {
+  font-size: var(--font-size-primary);
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.card_main input {
+  height: 38px;
+  width: 100%;
+  border-radius: var(--border-radius-primary);
+  border: 1px solid #4c4a49;
+  color: #565454;
+  font-size: 16px;
+  text-align: center;
+}
+
+.card_main input ~ input {
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  color: white;
+  background-color: var(--btn-color);
+  border: none;
+  border-radius: var(--border-radius-primary);
+  font-size: 18px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.card_desc {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card_desc a {
+  color: #103173;
+  font-size: 15px;
+}
+
+.card_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #5c5b5b;
+  margin-top: 50px;
+}
+
+.second_card {
+  width: 250px;
+}
+
+div.second_card .card_main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card_main img {
+  width: 30px;
+  height: 30px;
+}
+
+.card_link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  font-size: 18px;
+}
+
+.card_link a {
+  color: black;
+}
+
+.card_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+}
+
+.card_social img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  display: flex; 
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  background-color: #ff7d00;
+  opacity: 0.25;
+  border-radius: 50%;
+  position: relative;
+  z-index: -1;
+}
+
+div.circle.one {
+  left: -80px;
+  top: -50px;
+}
+
+div.circle.two {
+  left: 140px;
+  top: -70px;
+}
+
+.card_main input:focus {
+  color: black;
+}
+
+@media all and (max-width: 720px) {
+  
+  main {
+    flex-wrap: wrap; 
+    margin-top: 40px;
+  }
+  
+  div.first_card {
+    width: 80%;  
+  }
+  
+  div.second_card {
+    width: 80%; 
+    height: auto;
+    margin-bottom: 20px; 
+  }
+  
+  .menu {
+    display: block;
+  }
+
+  .header_desc {
+    display: none;
+  }
+
+  .sfu_header .header_text {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  img {
+    width: 25px;
+    height: auto;
+  }
+
+  .circle {
+    display: none;
+  }
+
+  .card_main input {
+    font-size: 14px;
+  }
+  
+  div.second_card .title {
+    margin-bottom: 20px;
+  }
+  
+  .card_social {
+    margin-top: 20px; 
+  }
+
+  .card_link {  
+    font-size: 15px; 
+  }
+}
+
+@media all and (max-width: 560px)
+{
+  div.first_card {
+    width: 100%;
+  }
+  
+  div.second_card {
+    width: 100%; 
+  }
+}
+
+@media all and (max-width: 480px) {
+  
+  div.first_card {
+    width: 100%;
+  }
+  
+  div.second_card {
+    width: 100%; 
+  }
+
+  .sfu_header .header_text {
+    font-size: 16px;
+  }
+
+  .card_main .title {
+    font-size: 18px;
+  }
+
+  .card_desc {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .card_footer {
+    margin-top: 35px;
+    font-size: 0.6em;
+  }
+
+  .card_link {
+    font-size: 14px;
+    gap: 10px;
+  }
+  
+  .card_social {
+    font-size: 14px;
+  }
+  
+  .card_social img {
+    width: 17px; 
+    height: auto;
+  }
+  
+}
+
